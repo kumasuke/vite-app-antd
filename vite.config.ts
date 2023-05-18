@@ -3,20 +3,20 @@ import react from '@vitejs/plugin-react-swc'
 import Pages from 'vite-plugin-pages'
 
 import type { Adapter } from 'vite-plugin-mix'
-import mixPlugin, { vercelAdapter } from 'vite-plugin-mix'
+import mix, { vercelAdapter } from 'vite-plugin-mix'
 
-interface MixConfig {
-  handler: string
-  adapter?: Adapter | undefined
-}
+// interface MixConfig {
+//   handler: string
+//   adapter?: Adapter | undefined
+// }
 
-type MixPlugin = (config: MixConfig) => Plugin
+// type MixPlugin = (config: MixConfig) => Plugin
 
-interface Mix {
-  default: MixPlugin
-}
+// interface Mix {
+//   default: MixPlugin
+// }
 
-const mix = (mixPlugin as unknown as Mix).default
+// const mix = (mixPlugin as unknown as Mix).default
 
 // https://vitejs.dev/config/
 export default defineConfig({
