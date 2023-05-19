@@ -1,8 +1,6 @@
-import type { Handler } from 'vite-plugin-mix'
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-export const handler: Handler = (req, res, next) => {
-  if (req.path === '/api/hello') {
-    return res.end('hello')
-  }
-  next()
+export default function (request: VercelRequest, response: VercelResponse) {
+  const { name = 'World' } = request.query;
+  response.send(`Hello ${name}!`);
 }
