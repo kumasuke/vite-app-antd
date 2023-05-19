@@ -2,6 +2,7 @@
   "name": "vite-app-antd",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev:client": "vite",
     "dev:api": "nodemon --watch ./src/api --ext ts --exec \"node --loader esbuild-register/loader -r esbuild-register ./src/api/server.ts\"",
