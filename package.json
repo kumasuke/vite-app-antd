@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "packageManager": "pnpm@8.5.1",
   "scripts": {
     "dev:client": "vite",
     "dev:api": "nodemon --watch ./src/api --ext ts --exec \"node --loader esbuild-register/loader -r esbuild-register ./src/api/server.ts\"",
