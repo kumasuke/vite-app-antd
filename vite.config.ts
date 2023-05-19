@@ -9,4 +9,7 @@ export default defineConfig({
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
   ],
+  build: {
+    outDir: '.vercel/output/static',
+  }
 })
