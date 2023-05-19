@@ -1,7 +1,7 @@
 {
   "functions": {
     ".vercel/output/api/**/*.js": {
-      "runtime": "nodejs@18"
+      "runtime": "edge"
     }
   }
 }
