@@ -1,3 +1,29 @@
 {
-  "version": 3
+  "version": 3,
+  "routes": [
+    {
+      "src": "^/api(.*)$",
+      "dest": "/index"
+    },
+    {
+      "src": "^/assets/(.*)$",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "^/.*$",
+      "dest": "/index.html"
+    },
+    {
+      "handle": "error"
+    },
+    {
+      "status": 404,
+      "src": "^(?!/api).*$",
+      "dest": "/404.html"
+    }
+  ],
+  "framework": {
+    "version": "4.3.2"
+  },
+  "crons": []
 }

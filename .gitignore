@@ -25,4 +25,5 @@ dist-ssr
 *.sw?
 
 .vercel/**/*.js
+.vercel/**/*.json
 .vercel/output/static/*

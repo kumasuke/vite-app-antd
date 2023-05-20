@@ -9,8 +9,9 @@
     "dev:api": "nodemon --watch ./src/api --ext ts --exec \"node --loader esbuild-register/loader -r esbuild-register ./src/api/server.ts\"",
     "dev": "pnpm run \"/^dev:.*/\"",
     "build:api": "esbuild --bundle --outfile=./.vercel/output/functions/index.func/index.js --platform=node --target=node18 ./src/api/index.ts",
+    "copy:config": "node -e \"require('fs').copyFileSync('functions_vc-config.json', '.vercel/output/functions/index.func/.vc-config.json')\"",
     "build:client": "tsc && vite build",
-    "build": "pnpm run \"/^build:.*/\"",
+    "build": "pnpm run \"/^build:.*/\" && pnpm run copy:config",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
